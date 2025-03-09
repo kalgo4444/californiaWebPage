@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter_28pt-Regular.ttf");
+}
+@font-face {
+    font-family: ReadexPro;
+    src: url("../fonts/ReadexPro-Regular.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+input,button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+:root{
+    --mainColor: #4B4B4B;
+    --wrapperColor: #DCE5E2;
+    --cardColor: #F8F9FA;
+}
+
+/* header  */
+.top{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: .3s;
+    box-shadow: #000 0px 0px 10px;
+}
+.top.hidden{
+    bottom: -60px;
+    right: -60px;
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+.header.shrink{
+    box-shadow: 0 5px 5px #0001;
+}
+.header.shrink .navbar{
+    height: 55px;
+}
+.navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+.navCollaction{
+    display: flex;
+    gap: 33px;
+}
+.navItem{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Inter;
+    transition: .3s;
+}
+.navItem:hover{
+    color: var(--mainColor);
+}
+.animateLogo{
+    transform: translate(-50px, -30px) scale(0.8);
+    opacity: 0;
+    animation: logoAnima .3s ease-in .3s forwards;
+}
+@keyframes logoAnima {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+.animateItem:first-child{
+    transform: translate(-10px, -30px) scale(0.8);
+    opacity: 0;
+    animation: itemAnima1 .3s ease-in .4s forwards;
+}
+.animateItem:nth-child(2){
+    transform: translate(-5px, -30px) scale(0.8);
+    opacity: 0;
+    animation: itemAnima2 .3s ease-in .6s forwards;
+
+}
+.animateItem:nth-child(3){
+    transform: translate(5px, -30px) scale(0.8);
+    opacity: 0;
+    animation: itemAnima3 .3s ease-in .8s forwards;
+
+}
+.animateItem:last-child{
+    transform: translate(10px, -30px) scale(0.8);
+    opacity: 0;
+    animation: itemAnima4 .3s ease-in .1s forwards;
+}
+@keyframes itemAnima1 {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes itemAnima2 {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes itemAnima3 {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes itemAnima4 {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+.navRight{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.navRight img:first-child{
+    transform: translate(20px, -30px) scale(0.8);
+    opacity: 0;
+    animation: rigthAnima .3s ease-in 1.1s forwards;
+}
+.navRight img:last-child{
+    transform: translate(40px, -30px) scale(0.8);
+    opacity: 0;
+    animation: rigthAnima2 .3s ease-in 1.3s forwards;
+}
+@keyframes rigthAnima {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes rigthAnima2 {
+    to{
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* hero  */
+.heroWrapper{
+    margin-top: 28px;
+    max-width: 1249px;
+    width: 100%;
+    min-height: 550px;
+    height: 100%;
+    background: var(--wrapperColor);
+    border-radius: 30px;
+    display: flex;
+}
+.heroDesc, .heroImg{
+    width: 50%;
+}
+.heroDesc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 56px;
+}
+.heroTitle{
+    max-width: 588px;
+    width: 100%;
+    font-family: ReadexPro;
+    font-size: 58px;
+}
+.heroText{
+    margin-top: 19px;
+    max-width: 565px;
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+}
+.heorBtn{
+    margin-top: 30px;
+    padding: 14px 53px;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 200px;
+    transition: .3s;
+    font-size: 18px;
+    font-family: Inter;
+}
+.heorBtn:hover{
+    background: #F8F9FA;
+}
+.heorBtn:active{
+    background: #000;
+    color: #ffffff;
+}
+
+.heroImg{
+    display: flex;
+}
+.heroWrapperAnima{
+    transform: translateY(40px) scale(0.8);
+    animation: wrapperHeroAnima .3s linear 1.4s forwards;
+    opacity: 0;
+}
+@keyframes wrapperHeroAnima {
+    to{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+.heroTitleAnima{
+    transform: translateX(-150px) scale(0.8);
+    animation: titleHeroAnima .4s linear 1.5s forwards;
+    opacity: 0;
+}
+.heroTextAnima{
+    transform: translateX(-150px) scale(0.8);
+    animation: textHeroAnima .4s linear 1.6s forwards;
+    opacity: 0;
+}
+.heroBtnAnima{
+    transform: translateX(-150px) scale(0.8);
+    animation: btnHeroAnima .4s linear 1.7s forwards;
+    opacity: 0;
+}
+@keyframes titleHeroAnima {
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes textHeroAnima {
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes btnHeroAnima {
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+.heroImgAnima{
+    transform: translateY(200px) scale(0.8);
+    opacity: 0;
+    animation: imgHeroAnima .4s ease-in 1.8s forwards;
+}
+@keyframes imgHeroAnima {
+    to{
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 990px) {
+    /* hero  */
+    .heroDesc{
+        padding-left: 30px;
+    }
+    .heroTitle{
+        font-size: 30px;
+    }
+    .heroText{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .heorBtn{
+        margin-top: 20px;
+    }
+}
+
+
+
+
+@media (max-width: 700px) {
+    /* hero  */
+    .navCollaction{
+        display: none;
+    }
+}
