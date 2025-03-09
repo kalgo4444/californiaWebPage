@@ -26,7 +26,9 @@ input,button{
 }
 img{
     max-width: 100%;
+    width: 100%;
     max-height: 100%;
+    height: 100%;
 }
 .container{
     max-width: 1280px;
@@ -63,6 +65,7 @@ img{
     width: 100%;
     z-index: 100;
     transition: .5s;
+    background: #ffffff;
 }
 .header.shrink{
     box-shadow: 0 5px 5px #0001;
@@ -180,7 +183,7 @@ img{
     margin-top: 28px;
     max-width: 1249px;
     width: 100%;
-    min-height: 550px;
+    /* min-height: 550px; */
     height: 100%;
     background: var(--wrapperColor);
     border-radius: 30px;
@@ -277,7 +280,7 @@ img{
 .heroImgAnima{
     transform: translateY(200px) scale(0.8);
     opacity: 0;
-    animation: imgHeroAnima .4s ease-in 1.8s forwards;
+    animation: imgHeroAnima .4s ease-in 1.6s forwards;
 }
 @keyframes imgHeroAnima {
     to{
@@ -285,6 +288,78 @@ img{
         opacity: 1;
     }
 }
+
+/* itemsrule  */
+.itemruleWrapper{
+    max-width: 1280px;
+    min-height: 606px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.itemsruleTitle{
+    margin-top: 72px;
+    max-width: 642px;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: ReadexPro;
+}
+.itemsruleText{
+    margin-top: 9px;
+    max-width: 422px;
+    width: 100%;
+    font-size: 13px;
+    font-family: ReadexPro;
+}
+.itemsruleAnima{
+    transform: translateY(100px) scale(0.8);
+    animation:  itemsruleAnima1 .4s ease-in  1.6s forwards;
+    opacity: 0;
+}
+@keyframes itemsruleAnima1 {
+    to{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+.itemsruleCardsWrapper{
+    margin-top: 50px;
+    max-width: 1280px;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+.itemsruleCard{
+    max-width: calc(25% - 19.5px);
+    width: 100%;
+    height: 396px;
+}
+.itemsruleCardBody{
+    margin-top: 9px;
+}
+.itemsruleCardTitle{
+    font-family: ReadexPro;
+    font-weight: 400px;
+    font-size: 22px;
+}
+.itemsruleCardText{
+    max-width: 261px;
+    width: 100%;
+    margin-top: 9px;
+    font-size: 14px;
+    color: var(--mainColor);
+    font-family: Inter;
+}
+.itemsruleCardPrice{
+    margin-top: 25px;
+    font-family: Inter;
+    font-size: 18px;
+}
+
+
 
 
 
@@ -301,7 +376,7 @@ img{
     }
     .heroText{
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .heorBtn{
         margin-top: 20px;
@@ -315,5 +390,77 @@ img{
     /* hero  */
     .navCollaction{
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    /* hero  */
+    .heroWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px 0 10px;
+    }
+    .heroDesc, .heroImg{
+        width: 100%;
+    }
+    .heroDesc{
+        margin-top: 30px;
+        padding-left: 0;
+        display: flex;
+    }
+    .heroTitle{
+        width: 100%;
+        font-size: 38px;
+        text-align: center;
+    }
+    .heroText{
+        width: 100%;
+        font-size: 20px;
+    }
+    .heorBtn{
+        margin: 20px auto;
+    }
+}
+@media (max-width: 400px) {
+    /* hero  */
+    .heroWrapper{
+        padding: 0 7px 0 7px;
+    }
+    .heroDesc{
+        margin-top: 30px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+    }
+    .heroTitle{
+        width: 100%;
+        font-size: 36px;
+        text-align: center;
+    }
+    .heroText{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 400px) {
+    /* hero  */
+    .heroWrapper{
+        padding: 0 5px 0 5px;
+    }
+    .heroDesc{
+        margin-top: 30px;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+    }
+    .heroTitle{
+        width: 100%;
+        font-size: 32px;
+    }
+    .heroText{
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
     }
 }
