@@ -530,7 +530,6 @@ img{
 .lookingWtapper{
     max-width: 1280px;
     width: 100%;
-    height: 834px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -638,6 +637,7 @@ img{
     background: #FFF;
 }
 .lookingInfoSearch input{
+    max-width: 285px;
     font-size: 14px;
     font-family: Inter;
     text-indent: 32px;
@@ -649,16 +649,50 @@ img{
     color: #000
 }
 .lookingInfoSearch button{
-    width: 115px;
-    height: 50px;
+    padding: 16px 32px;
     background: #000;
     color: #ffffff;
-    transform: translateX(100px);
     border-radius: 0 200px 200px 0;
     tab-size: 14px;
     font-family: Inter;
 }
 
+/* footer  */
+.footer{
+    margin-top: 15px;
+    background: var(--cardColor);
+    padding-top: 48px;
+    padding-bottom: 20px;
+}
+.footerWrapper{
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footerText{
+    margin-top: 18px;
+    max-width: 304px;
+    width: 100%;
+    font-family: Inter;
+}
+.footerCollaction{
+    display: flex;
+    flex-direction: column;
+}
+.ftrTitle{
+    flex-wrap: 400;
+    font-family: ReadexPro;
+    font-size: 22px;
+}
+.footerItem{
+    margin-top: 19px;
+    font-size: 17px;
+    font-family: Inter;
+}
+.footerItem:hover{
+    color: var(--mainColor);
+}
 
 
 @media (max-width: 990px) {
@@ -717,6 +751,20 @@ img{
     .ideasSeeallBtn{
         margin-top: 50px;
     }
+    /* footer  */
+    .footerWrapper{
+        justify-content: space-evenly;
+    }
+    .footerText{
+        max-width: 200px;
+        font-size: 14px;
+    }
+    .ftrTitle{
+        font-size: 16px;
+    }
+    .footerItem{
+        font-size: 14px;
+    }
 }
 
 
@@ -727,6 +775,18 @@ img{
     }
     .itemsruleTitle{
         font-size: 34px;
+    }
+
+    /* footer  */
+    .footerText{
+        max-width: 150px;
+        font-size: 12px;
+    }
+    .ftrTitle{
+        font-size: 14px;
+    }
+    .footerItem{
+        font-size: 12px;
     }
 }
 
@@ -812,7 +872,7 @@ img{
 
     /* looking  */
     .lookingInfoWrapper{
-        padding: 0 10px;
+        padding: 0;
     }
     .lookingInfoTitle{
         font-size: 36px;
@@ -825,8 +885,26 @@ img{
         max-width: 260px;
         width: 100%;
     }
-    .lookingInfoSearch button, input{
-        /* visibility: hidden; */
+
+    /* footer  */
+    .footerWrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footerText{
+        max-width: 300px;
+        font-size: 18px;
+        margin: 10px auto 20px;
+    }
+    .footerCollaction{
+        margin-top: 20px;
+    }
+    .ftrTitle{
+        font-size: 26px;
+    }
+    .footerItem{
+        font-size: 20px;
     }
 }
 @media (max-width: 400px) {
