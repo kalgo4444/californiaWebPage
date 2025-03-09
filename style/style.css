@@ -880,11 +880,13 @@ img{
     .lookingInfoSearch{
         max-width: 300px;
         width: 100%;
+        display: none;
     }
     .lookingInfoSearch input{
         max-width: 260px;
         width: 100%;
     }
+
 
     /* footer  */
     .footerWrapper{
