@@ -23,6 +23,7 @@ input,button{
     border: none;
     outline: none;
     cursor: pointer;
+    background: transparent;
 }
 img{
     max-width: 100%;
@@ -378,7 +379,6 @@ img{
 
 /* seebest */
 .seebestWrapper{
-    margin-top: 50px;
     max-width: 1280px;
     width: 100%;
     display: flex;
@@ -464,8 +464,200 @@ img{
     margin: 0 auto;
 }
 /* ideas */
+.ideasWrapper{
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ideasTitle{
+    margin-top: 47px;
+    max-width: 497px;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: ReadexPro;
+}
+.ideasText{
+    margin-top: 9px;
+    max-width: 422px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: ReadexPro;
+}
+.ideasDescWrapper{
+    margin-top: 56px;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    gap: 35px;
+}
+.ideasDesc, .ideasImg{
+    width: 50%;
+}
+.ideasImg img{
+    width: 100%;
+    height: 100%;
+}
+.ideasDesc{
+    margin-top: 14px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ideasText1{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 24px;
+}
+.ideasSeeallBtn{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.ideasSeeallBtn span{
+    font-size: 24px;
+    font-family: Inter;
+}
 
+/* looking  */
+.lookingWtapper{
+    max-width: 1280px;
+    width: 100%;
+    height: 834px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lookingTitle{
+    max-width: 563px;
+    width: 100%;
+    margin-top: 51px;
+    font-family: ReadexPro;
+    font-size: 42px;
+    font-weight: 400;
+}
+.lookingSearch{
+    margin-top: 35px;
+    max-width: 650px;
+    width: 100%;
+    height: 60px;
+    background: var(--cardColor);
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+    border: 1px solid #ddd;
+}
+.lookingSearch:hover{
+    border: 1px solid #333;
+}
+.lookingSearch input{
+    background: transparent;
+    text-indent: 20px;
+    font-size: 14px;
+    font-family: Inter;
+    color: #000;
+}
+.lookingSearch input::placeholder{
+    color: #000;
+    font-size: 14px;
+    font-family: Inter;
+}
 
+.lookingTyple{
+    margin-top: 20px;
+    max-width: 660px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+.lookkingTypeBtn{
+    padding: 12px 22px;
+    border: 1px solid #999;
+    border-radius: 200px;
+    font-size: 14px;
+    font-family: Inter;
+    transition: .3s;
+}
+.lookkingTypeBtn:hover{
+    background: var(--cardColor);
+}
+.lookkingTypeBtn:active{
+    background: var(--wrapperColor);
+}
+.lookingInfoWrapper{
+    margin-top: 60px;
+    max-width: 935px;
+    width: 100%;
+    background: var(--wrapperColor);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.lookingInfoTitle{
+    margin-top: 47px;
+    max-width: 393px;
+    width: 100%;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: ReadexPro;
+}
+.lookingInfoText{
+    max-width: 549px;
+    width: 100%;
+    margin-top: 9px;
+    font-family: Inter;
+}
+.lookingInfoImg{
+    margin-top: 15px;
+}
+.lookingInfoSearch{
+    margin-top: 13px;
+    margin-bottom: 43px;
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+.lookingInfoSearch:hover{
+    background: #FFF;
+}
+.lookingInfoSearch input{
+    font-size: 14px;
+    font-family: Inter;
+    text-indent: 32px;
+    flex: 1;
+}
+.lookingInfoSearch input::placeholder{
+    font-size: 14px;
+    font-family: Inter;
+    color: #000
+}
+.lookingInfoSearch button{
+    width: 115px;
+    height: 50px;
+    background: #000;
+    color: #ffffff;
+    transform: translateX(100px);
+    border-radius: 0 200px 200px 0;
+    tab-size: 14px;
+    font-family: Inter;
+}
 
 
 
@@ -505,9 +697,27 @@ img{
     .seebestCard{
         max-width: calc(50% - 27px);
     }
+    /* ideas  */
+    .ideasDescWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ideasImg, .ideasDesc{
+        width: 100%;
+    }
+    .ideasDesc{
+        margin-top: -10px;
+        max-width: 670px;
+        width: 100%;
+    }
+    .ideasText1{
+        margin-top: 10px;
+        font-size: 26px;
+    }
+    .ideasSeeallBtn{
+        margin-top: 50px;
+    }
 }
-
-
 
 
 @media (max-width: 700px) {
@@ -579,6 +789,45 @@ img{
     .seebestCard{
         max-width: 100%;
     }
+
+    /* ideas  */
+    .ideasDesc{
+        margin-top: -20px;
+    }
+    .ideasText1{
+        font-size: 18px;
+    }
+    .ideasSeeallBtn{
+        margin-top: 30px;
+    }
+
+    /* looking  */
+    .lookingWtapper{
+        margin-top: 0;
+    }
+    .lookingTitle{
+        font-size: 34px;
+        text-align: center;
+    }
+
+    /* looking  */
+    .lookingInfoWrapper{
+        padding: 0 10px;
+    }
+    .lookingInfoTitle{
+        font-size: 36px;
+    }
+    .lookingInfoSearch{
+        max-width: 300px;
+        width: 100%;
+    }
+    .lookingInfoSearch input{
+        max-width: 260px;
+        width: 100%;
+    }
+    .lookingInfoSearch button, input{
+        /* visibility: hidden; */
+    }
 }
 @media (max-width: 400px) {
     /* hero  */
@@ -600,6 +849,7 @@ img{
         width: 100%;
         text-align: center;
     }
+
 }
 @media (max-width: 400px) {
     /* hero  */
@@ -629,4 +879,12 @@ img{
     .itemsruleCardText{
         font-size: 14px;
     }
+
+        /* ideas  */
+        .ideasDesc{
+            margin-top: -30px;
+        }
+        .ideasText1{
+            font-size: 14px;
+        }
 }
