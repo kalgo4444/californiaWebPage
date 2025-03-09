@@ -376,7 +376,94 @@ img{
     }
 }
 
-
+/* seebest */
+.seebestWrapper{
+    margin-top: 50px;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seebestTitle{
+    margin-top: 43px;
+    max-width: 529px;
+    width: 100%;
+    font-size: 42px;
+    font-family: ReadexPro;
+    font-weight: 400;
+}
+.seebestText{
+    margin-top: 9px;
+    font-family: ReadexPro;
+    font-size: 13px;
+}
+.seebestCardWrapper{
+    margin-top: 56px;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 27px;
+}
+.seebestCard{
+    max-width: calc(33.33% - 18px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cardColor);
+    border-radius: 20px;
+    transition: .3s;
+}
+.seebestCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.seebestCardHead{
+    margin-top: 41px;
+    text-align: center;
+}
+.seebestCardText{
+    max-width: 253px;
+    width: 100%;
+    font-family: ReadexPro;
+    font-size: 13px;
+    font-weight: 400;
+}
+.seebestCardTitle{
+    max-width: 253px;
+    width: 100%;
+    font-family: ReadexPro;
+    font-size: 28px;
+    font-weight: 400;
+}
+.seebestCardBtn{
+    margin-top: 30px;
+    /* background: transparent; */
+    padding: 14px 63px;
+    border-radius: 200px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: Inter;
+    transition: .5s;
+}
+.seebestCardBtn:hover{
+    background: #FFF
+}
+.seebestCardBtn:active{
+    background: #000;
+    color: #ffffff;
+}
+.seebestCardImg{
+    margin-top: 30px;
+}
+.seebestCardImg img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+/* ideas */
 
 
 
@@ -413,6 +500,10 @@ img{
         max-width: 330px;
         width: 100%;
         font-size: 16px;
+    }
+    /* seebest */
+    .seebestCard{
+        max-width: calc(50% - 27px);
     }
 }
 
@@ -476,6 +567,17 @@ img{
     }
     .itemsruleCardPrice{
         margin-top: 20px;
+    }
+
+    /* seebest  */
+    .seebestWrapper{
+        text-align: center;
+    }
+    .seebestTitle{
+        width: 100%;
+    }
+    .seebestCard{
+        max-width: 100%;
     }
 }
 @media (max-width: 400px) {
