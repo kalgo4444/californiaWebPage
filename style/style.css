@@ -97,6 +97,7 @@ img{
     opacity: 0;
     animation: logoAnima .3s ease-in .3s forwards;
 }
+/* animation  */
 @keyframes logoAnima {
     to{
         transform: translate(0, 0) scale(1);
